@@ -1,0 +1,27 @@
+<nav class="nav-wrapper blue darken-7">
+    <div class="container">
+        <a href="/" class="brand-logo">Vocabulary</a>
+        <a href="/" data-target="mobile-links" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            {{#if isIndex}}
+            <li class="active"><a href="/">Test</a></li>
+            {{else}}
+            <li><a href="/">Test</a></li>
+            {{/if}}
+
+            {{#if isAdd}}
+            <li class="active"><a href="/add">Add</a></li>
+            {{else}}
+            <li><a href="/add">Add</a></li>
+            {{/if}}
+
+        </ul>
+        
+    </div>
+</nav>
+
+<ul class="sidenav" id="mobile-links">
+    <li><a href="/">Test</a></li>
+    <li><a href="/add">Add</a></li>
+</ul>
+

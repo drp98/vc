@@ -1,0 +1,29 @@
+{
+  "name": "vocabulary-note",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "scss": "node-sass --watch sass --o public"
+  },
+  "author": "Roman Dziayk <dziadyk.roman@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-validator": "^6.4.0",
+    "handlebars": "^4.5.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.4",
+    "mongoose": "^5.9.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2"
+  }
+}

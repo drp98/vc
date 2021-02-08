@@ -1,0 +1,54 @@
+<div class="wrapper">
+    <div class="settings-block">
+        <form action="/select" method="post" id="select-form">
+            <div class="input-field col s12">
+                <select id="category" name="select-category">
+                    <option value="" disabled>Choose a category</option>
+                    <option id="option-1-select-category" value="in progress" selected>In progress</option>
+                    <option id="option-2-select-category" value="already known">Already known</option>
+                </select>
+                <label>Category</label>
+            </div>
+        
+            <div class="input-field col s12">
+                <select id="language" name="select-language">
+                    <option value="" disabled>Choose a category</option>
+                    <option id="option-1-select-language" value="eng" selected>ENG</option>
+                    <option id="option-2-select-language" value="rus">RUS</option>
+                </select>
+                <label>Language</label>
+            </div>
+            <div class="input-field col s12">
+                <select id="sort" name="select-sort">
+                    <option value="" disabled>Choose a sort</option>
+                    <option id="option-1-select-sort" value="random">Random</option>
+                    <option id="option-2-select-sort" value="new">First: new</option>
+                    <option id="option-3-select-sort" value="old" selected>First: old</option>
+                </select>
+                <label>Sorting</label>
+            </div>
+        </form>
+    </div>
+    <div class="words-block">
+        <span id="counter">[ 1 / {{words.length}} ]</span>
+        <span id="wordId" class="word-item">{{words.0.word}}</span>
+        <span id="transcriptionId" class="transcription-item">{{words.0.transcription}}</span>
+        <span id="translateId" class="translate-item isHidden">{{words.0.translate}}</span>
+    </div>
+    <div class="buttons-block">
+        <form action="/already" method="POST" id="form-known"></form>
+            <button id="btn-translate" class="btn waves-effect waves-light" type="submit">Translate</button><br/>
+            <button id="btn-known" class="btn waves-effect waves-light">Already know</button><br/>
+            <button id="btn-next" class="btn waves-effect waves-light" type="submit">Next</button>
+            <button id="btn-back" class="btn waves-effect waves-light">Back</button>
+        </form>
+    </div>
+</div>
+{{!-- <div id="mySwitch" class="switch">
+    <label>
+    Off
+    <input type="checkbox">
+    <span class="lever"></span>
+    On
+    </label>
+</div> --}}

@@ -1,0 +1,90 @@
+<form action="/add" method="POST" id="add-form">
+    <h2>Add new word</h2>
+
+    <div class="input-field">
+        <input name="word" id="word" type="text" class="validate" required="" aria-required="true" required oninvalid="this.setCustomValidity('Complete this field')" oninput="setCustomValidity('')">
+        <label for="word">Word*</label>
+        <span class="helper-text" data-error="This field is required" ></span> 
+    </div>
+     <div class="input-field">
+        <input name="translate" id="translate" type="text" class="validate" required="" aria-required="true" required oninvalid="this.setCustomValidity('Complete this field')" oninput="setCustomValidity('')">
+        <label for="translate">Translate*</label>
+        <span class="helper-text" data-error="This field is required"></span>
+    </div>
+     <div class="input-field">
+        <input name="transcription" id="transcription" type="text">
+        <label for="transcription">Transcription</label>
+        <span class="helper-text"></span>
+    </div>
+
+    <button type="submit" class="btn btn-add">Add</button>
+</form>
+
+{{!-- 
+<form action="/add" method="POST" id="add-form">
+    <h2>Add new word</h2>
+
+    <div class="input-field">
+        <input name="word" id="word" type="text"  data-error=".errorTxt1" data-succes=".successTxt1" class="valid">
+        <label for="word">Word *</label>
+        <div class="errorTxt1"></div>
+    </div>
+     <div class="input-field">
+        <input name="translate" id="translate" type="text" class="error" required="" aria-required="true">
+        <label for="translate">Translate *</label>
+        <span class="helper-text" data-error="This field is required"></span>
+    </div>
+     <div class="input-field">
+        <input name="transcription" id="transcription" type="text">
+        <label for="transcription">Transcription</label>
+        <span class="helper-text"></span>
+    </div>
+
+    <button type="submit" class="btn">Add</button>
+</form>
+
+
+<script>
+    $("#add-form").validate({
+    rules: {
+        word: {
+            required: true,
+            minlength: 5
+        },
+        translate: {
+            required: true
+        },
+        curl: {
+            required: true,
+            url:true
+        },
+        crole:"required",
+        cgender:"required",
+        cagree:"required"
+    },
+    //For custom messages
+    messages: {
+        word:{
+            required: "Enter a word",
+            minlength: "Enter at least 5 characters"
+        },
+        translate: {
+            required: "Enter a translate"
+        },
+        curl: "http://localhost:3000/add"
+    },
+    errorElement : 'div',
+    errorPlacement: function(error, element) {
+      var placement = $(element).data('error');
+      if (placement) {
+        $(placement).append(error)
+      } else {
+        error.insertAfter(element);
+      }
+    }
+ });
+ 
+</script> --}}
+
+{{!-- <input id="uname" name="uname" type="text" data-error=".errorTxt1" aria-required="true" class="error" aria-describedby="uname-error" aria-invalid="true">
+<input id="cemail" type="email" name="cemail" data-error=".errorTxt2" aria-required="true" class="error" aria-describedby="cemail-error" aria-invalid="true"> --}}

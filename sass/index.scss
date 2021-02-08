@@ -1,0 +1,97 @@
+.brand-logo {
+    margin-left: 20px;
+}
+
+.word-item {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.transcription-item {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.translate-item {
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.no-word-item {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.isHidden {
+    visibility: hidden;
+}
+
+.isVisible{
+    visibility: visible;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+nav {
+    .sidenav-trigger {
+        margin: 0;
+    }
+}
+
+@media screen and (max-device-width: 992px) {
+    .brand-logo {
+        margin-left: 0;
+    }
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.errorTxt1 {
+    color: red!important;
+    border-color: red!important;
+}
+
+.successTxt1 {
+    color: royalblue;
+}
+
+.words-block {
+    margin-top: 20px;
+    span {
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+.buttons-block {
+    margin-top: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+    .btn {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.btn-add {
+    width: 120px;
+}
+
+.black {
+    background-color: black;
+    color: white;
+}
+
+.input-field.col label {
+    left: 0;
+    top: -18px;
+}

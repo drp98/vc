@@ -1,0 +1,38 @@
+{{#if words.length}}
+
+    {{> words}}
+
+    <script>
+        document.querySelector('#sort').value = '{{{selectedSorting}}}';
+        document.querySelector('#language').value = '{{{selectedLanguage}}}';
+    </script>
+    <script src="/main.js"></script>
+  
+{{else}}
+    <script>
+        console.log('wew')
+    </script>
+
+    {{> nowords}}
+    
+{{/if}}
+
+<script>
+    document.querySelector('#category').value = '{{{selectValue}}}';//getting selectValue from server  
+    //getting selectValue from server  
+
+
+    document.querySelector('#category').addEventListener('change', () => {//select in progress/already known
+        document.querySelector('#select-form').submit();
+        const sel = document.querySelector('#category');
+        fetch('/select', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                valueCategory: sel.options[sel.selectedIndex].value
+            })
+        })
+    })
+</script>
